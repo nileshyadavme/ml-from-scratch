@@ -1,0 +1,23 @@
+services:
+
+  # ── Validation Report (3/3 PASS) ─────────────────────────────────────────────
+  # Run with:  docker compose run --rm validate
+  # Runs validate.py, prints results, then exits. No server, no ports.
+  validate:
+    build: .
+    image: ml-from-scratch
+    container_name: ml-from-scratch-validate
+    command: python validate.py
+
+  # ── Interactive Python shell ──────────────────────────────────────────────────
+  # Run with:  docker compose run --rm shell
+  # Drops you into a Python REPL with all models importable.
+  # Useful for manual experiments:
+  #   >>> from models.linear_regression import LinearRegression
+  shell:
+    build: .
+    image: ml-from-scratch
+    container_name: ml-from-scratch-shell
+    stdin_open: true
+    tty: true
+    command: python

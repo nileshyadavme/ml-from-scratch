@@ -1,0 +1,33 @@
+# Byte-compiled files
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Jupyter artefacts (if someone experiments locally)
+.ipynb_checkpoints/
+*.ipynb
+
+# OS clutter
+.DS_Store
+Thumbs.db
+
+# Editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# Docker files themselves
+Dockerfile
+.dockerignore
+docker-compose.yml
